@@ -1,10 +1,23 @@
+﻿# Eii.Ecopath.WindowsIntegrationPlugin
 
-This is a template readme file for Eii repositories. It is intended to be updated with project-specific information.
+A plug-in that integrates EwE into limited aspects of Windows
 
-# CI/CD
-The master branch is protected and requires pull requests to merge. All pull requests must pass the build before merging.
+## Package
 
-# Packages
-The version of packages is automatically controlled by GitVersion
+- **Package ID:** `Eii.Ecopath.WindowsIntegrationPlugin`
+- **License:** EUPL-1.2
+- **Icon:** `EII_plain_128x128.png`
 
-See https://github.com/Official-EwE/Ecopath-project/wiki/NuGet-packages
+## Build
+
+Build the solution on Windows with the .NET SDK and .NET Framework 4.8 targeting pack:
+
+``powershell
+dotnet build .\Eii.Ecopath.WindowsIntegrationPlugin.slnx --configuration Release
+``
+
+Packages are versioned by GitVersion in CI. The `Eii.*` dependencies require access to the Ecopath International Initiative GitHub Packages feed.
+
+## CI/CD
+
+The `master` branch is protected and requires pull requests to merge. Pull requests must pass the build check. Merges to `master` publish the NuGet package.
